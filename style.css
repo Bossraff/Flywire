@@ -1,0 +1,531 @@
+:root {
+    --primary-color: #0F9D58;
+    --background-color: #f0f3f7;
+    --secon-color: #9da2ad;
+    --grey: #7a7a7b;
+    --white: #ffffff;
+}
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+body,
+html {
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: var(--background-color);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.menu-wrap {
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item {
+    margin-left: 1rem;
+    padding: .5rem 1.5rem;
+    font-weight: 600;
+    color: var(--grey);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+
+.menu-item:hover,
+.menu-item.active {
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+}
+
+
+
+.contact-btn {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+
+.contact-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 1rem;
+}
+
+
+.fullheight {
+    height: 100vh;
+}
+
+.align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.bg-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-img-fixed {
+    background-attachment: fixed;
+}
+
+
+/*NEWS CSS*/
+/* News Section */
+#news {
+    padding: 9rem 0;
+    color: var(--white);
+}
+
+#news h1 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+#news .news-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+#news .news-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: calc(50% - 1rem); /* Adjust width based on layout */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+}
+
+#news .news-item h3 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+#news .news-item p {
+    color: var(--secon-color);
+}
+
+
+/* about */
+.container {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+section {
+    padding: 9rem 0;
+}
+
+.slogan {
+    text-align: left;
+}
+
+.slogan h1 {
+    font-size: 7rem;
+    color: var(--primary-color);
+}
+
+.slogan button {
+    padding: 1rem 5rem;
+    outline: none;
+    border: none;
+    background-color: var(--background-color);
+    border: .125rem solid var(--primary-color);
+    border-radius: 2rem;
+    color: var(--primary-color);
+    margin: 3rem 0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .5s ease-in-out;
+}
+
+
+.slogan button:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+
+#about img {
+    
+    border-radius: 2rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+        rgba(17, 17, 26, 0.1) 0px 16px 56px,
+        rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    max-width: 80%; /* Adjust this value to make the image smaller */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.about-slogan {
+    margin-top: 1rem;
+    position: relative;
+    padding: 2rem; /* Adjust padding as needed */
+    max-width: 80%; /* Set a maximum width */
+    margin: 0 auto; /* Center it within the column */
+    background-color: var(--white);
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.about-slogan.start {
+    transform: translateX(-10rem) !important;
+}
+
+.about-slogan h3 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--grey);
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.col-5 {
+    position: relative; /* Ensures that absolute positioning is relative to this container */
+    margin-top: -8rem; /* Adjust this value to control how much overlap you want */
+    z-index: 1; /* Ensures this column is above the other content */
+    margin-left: 30rem;
+}
+
+.left-to-right {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.right-to-left {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.play-on-scroll {
+    opacity: 1;
+}
+
+.play-on-scroll.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+
+/* MENU SECTION */
+.food-menu {
+    padding: 4rem;
+    background-color: var(--white);
+    border-radius: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.food-menu h1 {
+    color: var(--grey);
+}
+
+.food-menu p {
+    margin: 2rem 0;
+}
+
+.food-category {
+    display: flex;
+}
+
+
+.food-category button {
+    padding: .5rem 2.5rem;
+    margin: 0 1rem;
+    outline: none;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    font-weight: 600;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.food-category button:hover,
+.food-category button.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.food-item {
+    width: 25%;
+    height: 30rem;
+    padding: 1rem;
+}
+
+.item-wrap {
+    height: 100%;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.member {
+    text-align: center;
+    margin: 15px;
+}
+
+.member img {
+    width: 150px; /* Adjust size as needed */
+    height: 120px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes the image round */
+}
+
+.member h3 {
+    margin-top: 10px;
+    font-size: 1.2rem; /* Adjust size as needed */
+    color: #333; /* Adjust color as needed */
+}
+
+
+.button-section {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin-top: 2rem; /* Space above the button section */
+    
+}
+
+.button-section button {
+    margin-left: 1rem; /* Space between buttons */
+    padding: 0.5rem 1.5rem; /* Padding for buttons */
+    font-weight: 600; /* Bold text */
+    color: var(--grey); /* Text color */
+    transition: 0.5s ease-in-out; /* Smooth transition */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* Remove default border */
+    border-radius: 1rem; /* Rounded corners */
+    background-color: transparent; /* Initial background */
+    border: .125rem solid var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+/* Hover Effect for Buttons */
+.button-section button:hover {
+    color: var(--white); /* Change text color on hover */
+    background-color: var(--primary-color); /* Change background color on hover */
+}
+
+
+
+
+
+
+/* Flex settings for the testimonial section */
+#testimonial .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#testimonial .col-4 {
+    flex: 1;
+    margin: 1rem;
+    min-width: 300px;
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.5) translateZ(-100px); /* Start small and far back */
+    transition: transform 0.6s ease, opacity 0.6s ease; /* Smooth transition */
+    transform-origin: center center; /* Ensures pop-up effect is centered */
+    perspective: 1000px; /* Creates a 3D pop-up effect */
+}
+
+#testimonial .col-4.active {
+    transform: scale(1) translateZ(0); /* Move to its original position and scale */
+    opacity: 1; /* Make fully visible */
+}
+
+/* Flex alignment for review content */
+.review-wrap {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 3rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    
+}
+
+/* Hover effect to add more interactivity */
+.review-wrap:hover {
+    transform: scale(1.05);
+}
+.review-content {
+    padding: 3rem;
+    border-bottom: .125rem solid var(--grey);
+    position: relative;
+    text-align: center;
+}
+
+.review-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -2.5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.review-info {
+    padding: 3rem;
+    text-align: center;
+}
+
+.rating {
+    margin-top: 2rem;
+}
+
+.rating i {
+    color: var(--primary-color);
+}
+
+
+/* Add animation for pop-up effect */
+@keyframes popUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.review-wrap.active {
+    animation: popUp 0.6s ease forwards;
+}
+
+
+
+
+
+.footer {
+    
+    color: var(--white);
+    display: flex; /* Make the footer a flex container */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+}
+
+.footer .container {
+    display: flex; /* Use flex for the inner container */
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+}
+
+.footer .row {
+    display: flex; /* Use flex for rows */
+    flex: 1; /* Allow rows to grow and fill available space */
+    justify-content: space-between; /* Distribute space between items */
+}
+
+.footer h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem; /* Space below headings */
+}
+
+.input-group {
+    padding: 1rem;
+    border: .125rem solid var(--primary-color);
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.input-group input {
+    flex: auto;
+    outline: none;
+    border: none;
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.input-group button {
+    padding: .5rem 1rem;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+    .footer .col-6, .footer .col-2, .footer .col-4 {
+        width: 100%; /* Full width for columns */
+        margin-bottom: 2rem; /* Space between stacked items */
+    }
+}
