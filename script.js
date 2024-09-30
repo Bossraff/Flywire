@@ -97,3 +97,12 @@ document.addEventListener('DOMContentLoaded', function () {
     elements.forEach((element) => observer.observe(element));
 });
 
+
+
+
+
+
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+}
