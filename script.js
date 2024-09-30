@@ -102,25 +102,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-function toggleMenu() {
-    const menuWrap = document.querySelector('.menu-wrap');
-    menuWrap.classList.toggle('active'); // Toggle active class
-}
-
-
-
-
-
-// nav
 const nav = document.querySelector('.nav'); // Select the nav element
-        const maxScrollHeight = 300; // Set a max scroll height for the effect
+const maxScrollHeight = 300; // Set a max scroll height for the effect
 
-        window.addEventListener('scroll', function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Current scroll position
-            
-            // Calculate the opacity based on the scroll position
-            let opacity = Math.min(1, (scrollTop / maxScrollHeight)); // Limit to a max of 1 (100% opacity)
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Current scroll position
+    
+    // Calculate the opacity based on the scroll position
+    let opacity = Math.min(1, (scrollTop / maxScrollHeight)); // Limit to a max of 1 (100% opacity)
 
-            // Change the background color based on the scroll position
-            nav.style.backgroundColor = `rgba(255, 255, 255, ${0.3 + opacity * 0.7})`; // Start at 30% opacity and go to 100%
-        });
+    // Change the background color based on the scroll position
+    nav.style.backgroundColor = `rgba(255, 255, 255, ${0.3 + opacity * 0.7})`; // Start at 30% opacity and go to 100%
+});
