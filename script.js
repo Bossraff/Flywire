@@ -103,6 +103,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('active');
+    const menuWrap = document.querySelector('.menu-wrap');
+    menuWrap.classList.toggle('active'); // Toggle active class
 }
