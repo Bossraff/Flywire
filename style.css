@@ -42,6 +42,7 @@
     --secon-color: #9da2ad;
     --grey: #7a7a7b;
     --white: #ffffff;
+    --black: #000000;
 }
 * {
     font-family: 'Poppins', sans-serif;
@@ -163,7 +164,7 @@ html {
 /* News Section */
 #news {
     padding: 9rem 0;
-    color: var(--white);
+    color: var(--primary-color);
 }
 
 #news h1 {
@@ -179,7 +180,7 @@ html {
 }
 
 #news .news-item {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 2rem;
     border-radius: 1rem;
     width: calc(50% - 1rem); /* Adjust width based on layout */
@@ -187,12 +188,12 @@ html {
 }
 
 #news .news-item h3 {
-    color: var(--white);
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
 #news .news-item p {
-    color: var(--secon-color);
+    color: var(--black);
 }
 
 
@@ -371,7 +372,7 @@ section {
 
 .member img {
     width: 150px; /* Adjust size as needed */
-    height: 120px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
     border-radius: 50%; /* Makes the image round */
 }
 
