@@ -1,3 +1,108 @@
+/* Base styles remain the same */
+
+/* Mobile Navbar Styles */
+.nav-toggle {
+    display: none; /* Hidden by default */
+}
+
+@media (max-width: 768px) {
+    /* Navbar adjustments for mobile */
+    .menu {
+        display: none; /* Hide the menu by default */
+        flex-direction: column;
+        background-color: var(--background-color);
+        position: absolute;
+        top: 60px; /* Adjust based on your nav height */
+        right: 0;
+        width: 100%;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        z-index: 98;
+    }
+
+    .menu-item {
+        margin: 0; 
+        padding: 1rem;
+        text-align: center;
+        width: 100%; 
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-toggle {
+        display: block; /* Show the toggle icon */
+        cursor: pointer;
+        font-size: 2rem;
+        color: var(--primary-color);
+    }
+
+    /* Navbar container adjustments */
+    .menu-wrap {
+        justify-content: space-between;
+    }
+
+    /* Show menu when active */
+    .menu.active {
+        display: flex;
+    }
+
+    /* Adjust logo and menu alignment */
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    /* News Section */
+    #news .news-content {
+        flex-direction: column;
+    }
+
+    #news .news-item {
+        width: 100%;
+    }
+
+    /* About Section */
+    .slogan h1 {
+        font-size: 4rem;
+    }
+
+    #about img {
+        max-width: 100%;
+    }
+
+    .about-slogan {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    /* Adjust the footer layout */
+    .footer .row {
+        flex-direction: column;
+    }
+    
+    .menu-item.active {
+        border-radius: 0; 
+    }
+
+    .button-section {
+        flex-direction: column;
+    }
+
+    .button-section button {
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+
+    /* Adjust testimonial layout */
+    #testimonial .row {
+        flex-direction: column;
+    }
+    
+    #testimonial .col-4 {
+        margin: 0.5rem;
+        min-width: 100%;
+    }
+}
+
+
+
 :root {
     --primary-color: #0F9D58;
     --background-color: #f0f3f7;
