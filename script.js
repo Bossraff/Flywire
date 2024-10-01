@@ -114,3 +114,55 @@ window.addEventListener('scroll', function() {
     // Change the background color based on the scroll position
     nav.style.backgroundColor = `rgba(255, 255, 255, ${0.3 + opacity * 0.7})`; // Start at 30% opacity and go to 100%
 });
+
+
+
+
+
+//tb
+// Function to open the modal and set the image source and caption
+function openModal(modalId, imageSrc, captionText) {
+    const modal = document.getElementById(modalId);
+    const modalImage = modal.querySelector('.modal-content');
+    const caption = modal.querySelector('#caption-' + modalId.split('-').pop());
+
+    // Display the modal and set the image and caption
+    modal.style.display = 'flex';
+    modalImage.src = imageSrc;
+    caption.textContent = captionText;
+}
+
+// Function to close the modal
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'none';
+}
+
+// Function to change the image within the modal gallery
+function changeImage(imageSrc, modalImageId) {
+    const modalImage = document.getElementById(modalImageId);
+    modalImage.src = imageSrc;
+}
+
+// Adding event listeners to close the modal when clicking outside the image or pressing 'Esc'
+document.querySelectorAll('.modal').forEach(modal => {
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal(modal.id);
+        }
+    });
+});
+
+// Event listener to close modal when 'Esc' key is pressed
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.style.display = 'none';
+        });
+    }
+});
+
+
+
+
+// Team building h1 animation

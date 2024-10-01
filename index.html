@@ -61,10 +61,11 @@
                 </a>
             </div>
             <div class="right-menu">
-                <div class="contact-btn">
+                <a href="#footer" class="contact-btn" title="Contact Us">
                     <i class='bx bx-envelope'></i> <!-- Email Icon -->
-                </div>
+                </a>
             </div>
+            
         </div>
     </div>
     <!-- END TOP NAVIGATION -->
@@ -142,22 +143,100 @@
 
 
 
-    <!-- Team Building Section -->
-    <section id="team-building" class="container">
-        <div class="slogan">
-            <h1>Team Building</h1>
-            <p>Meet the dedicated individuals who make up our incredible team.</p>
-            <button>Join Us</button>
+   <!-- Team Building Section -->
+<section id="team-building">
+    <h1>Team Building Gallery</h1>
+    <div class="gallery-container">
+        <div class="gallery-item" onclick="openModal('modal-gallery-1', 'assets/images/team builing1 .webp', 'Team Building Event 1')">
+            <img src="assets/images/team builing1 .webp" alt="Team Building Event 1">
+            <p>1st Team Building Album </p>
         </div>
-        <div class="about-slogan">
-            <h3>Our Culture</h3>
-            <p>We believe in teamwork, collaboration, and building a strong, supportive environment for everyone.</p>
+        <div class="gallery-item" onclick="openModal('modal-gallery-2', 'assets/images/tb222.jpg', 'Team Building Event 2')">
+            <img src="assets/images/tb222.jpg" alt="Team Building Event 2">
+            <p>2nd Building Album</p>
         </div>
-    </section>
+        <div class="gallery-item" onclick="openModal('modal-gallery-3', 'assets/images/team-building3.webp', 'Team Building Event 3')">
+            <img src="assets/images/team-building3.webp" alt="Team Building Event 3">
+            <p>3rd Building Album</p>
+        </div>
+        <div class="gallery-item" onclick="openModal('modal-gallery-4', 'assets/images/mouse1.jpg', 'Team Building Event 4')">
+            <img src="assets/images/mouse1.jpg" alt="Team Building Event 4">
+            <p>4th Team Building Album</p>
+        </div>
+    </div>
+
+    <!-- Modal for Gallery 1 -->
+    <div id="modal-gallery-1" class="modal">
+        <span class="close" onclick="closeModal('modal-gallery-1')">&times;</span>
+        <img class="modal-content" id="modal-image-1">
+        <div id="caption-1"></div>
+        <div class="modal-gallery">
+            <!-- Images for Modal 1 -->
+            <img src="assets/images/team builing1 .webp" onclick="changeImage('assets/images/team builing1 .webp', 'modal-image-1')">
+            <img src="Assets/tb1.webp" onclick="changeImage('Assets/tb1.webp', 'modal-image-1')">
+            <img src="Assets/tb1.webp" onclick="changeImage('Assets/tb1.webp', 'modal-image-1')">
+            <img src="Assets/tb1.webp" onclick="changeImage('Assets/tb1.webp', 'modal-image-1')">
+            <img src="Assets/tb1.webp" onclick="changeImage('Assets/tb1.webp', 'modal-image-1')">
+            <!-- Add more images here as needed -->
+        </div>
+    </div>
+
+    <!-- Modal for Gallery 2 -->
+    <div id="modal-gallery-2" class="modal">
+        <span class="close" onclick="closeModal('modal-gallery-2')">&times;</span>
+        <img class="modal-content" id="modal-image-2">
+        <div id="caption-2"></div>
+        <div class="modal-gallery">
+            <!-- Images for Modal 2 -->
+            <img src="assets/images/tb222.jpg" onclick="changeImage('assets/images/tb222.jpg', 'modal-image-2')">
+            <img src="assets/images/Team builing 2 .webp" onclick="changeImage('assets/images/Team builing 2 .webp', 'modal-image-2')">
+            <img src="assets/images/tb2222.jpg" onclick="changeImage('assets/images/tb2222.jpg', 'modal-image-2')">
+            <img src="assets/images/tb22222.jpg" onclick="changeImage('assets/images/tb22222.jpg', 'modal-image-2')">
+            <img src="assets/images/tb22.jpg" onclick="changeImage('assets/images/tb22.jpg', 'modal-image-2')">
+            <img src="assets/images/TB2.jpg" onclick="changeImage('assets/images/TB2.jpg', 'modal-image-2')">
+            <!-- Add more images here as needed -->
+        </div>
+    </div>
+
+    <!-- Modal for Gallery 3 -->
+    <div id="modal-gallery-3" class="modal">
+        <span class="close" onclick="closeModal('modal-gallery-3')">&times;</span>
+        <img class="modal-content" id="modal-image-3">
+        <div id="caption-3"></div>
+        <div class="modal-gallery">
+            <!-- Images for Modal 3 -->
+            <img src="assets/images/team-building3.webp" onclick="changeImage('assets/images/team-building3.webp', 'modal-image-3')">
+            <img src="photo1.jpg" onclick="changeImage('photo1.jpg', 'modal-image-3')">
+            <img src="photo1.jpg" onclick="changeImage('photo1.jpg', 'modal-image-3')">
+            <img src="photo1.jpg" onclick="changeImage('photo1.jpg', 'modal-image-3')">
+            <img src="photo1.jpg" onclick="changeImage('photo1.jpg', 'modal-image-3')">
+            <img src="photo1.jpg" onclick="changeImage('photo1.jpg', 'modal-image-3')">
+            <!-- Add more images here as needed -->
+        </div>
+    </div>
+
+    <!-- Modal for Gallery 4 -->
+    <div id="modal-gallery-4" class="modal">
+        <span class="close" onclick="closeModal('modal-gallery-4')">&times;</span>
+        <img class="modal-content" id="modal-image-4">
+        <div id="caption-4"></div>
+        <div class="modal-gallery">
+            <!-- Images for Modal 4 -->
+            <img src="assets/images/mouse1.jpg" onclick="changeImage('assets/images/mouse1.jpg', 'modal-image-4')">
+            <img src="assets/images/mouse2.jpg" onclick="changeImage('assets/images/mouse2.jpg', 'modal-image-4')">
+            <img src="assets/images/mouse3.jpg" onclick="changeImage('assets/images/mouse3.jpg', 'modal-image-4')">
+            <img src="assets/images/mouse4.jpg" onclick="changeImage('assets/images/mouse4.jpg', 'modal-image-4')">
+            <img src="assets/images/mouse4.jpg" onclick="changeImage('assets/images/mouse4.jpg', 'modal-image-4')">
+            <img src="assets/images/mouse4.jpg" onclick="changeImage('assets/images/mouse4.jpg', 'modal-image-4')">
+            <!-- Add more images here as needed -->
+        </div>
+    </div>
+</section>
+
 
     <!-- FOOD MENU SECTION -->
     <section class="align-items-center bg-img bg-img-fixed" id="food-menu-section"
-        style="background-image: url(assets/images/jakub-zerdzicki-p2zR1G1ry20-unsplash.jpg);">
+        style="background-image: url(assets/images/pyrrhus-cunanan-Z8ffwhT1aU8-unsplash.jpg);">
         <div class="container">
             <div class="food-menu">
                 <h1>
@@ -320,16 +399,15 @@
                     <div class="review-wrap zoom play-on-scroll delay-2">
                         <div class="review-content">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, labore nisi non
-                                molestias, minus laboriosam nostrum impedit iure facilis odio unde quia ad sunt corrupti
-                                dolores ratione voluptatibus quidem explicabo.
+                                The Flywire team consistently delivers outstanding service! Their dedication to excellence and teamwork makes a significant impact on our clients and work environment.
+                                With a strong focus on customer satisfaction and a positive culture, they truly stand out as an asset to our BPO company!
                             </p>
                             <div class="review-img bg-img" style="background-image: url(assets/images/raff.png);">
                             </div>
                         </div>
                         <div class="review-info">
                             <h3>
-                                Lorem Ipsum Dolor
+                                Raffy Acosta
                             </h3>
                             <div class="rating">
                                 <i class="bx bxs-star"></i>
@@ -401,7 +479,7 @@
 
 
     <!-- FOOTER SECTION -->
-    <section class="footer bg-img"
+    <section id="footer" class="footer bg-img"
         style="background-image: url(assets/images/steve-johnson-jl1cznIyyPc-unsplash.jpg);">
         <div class="container">
             <div class="row">
@@ -463,15 +541,7 @@
         </div>
     </section>
     <!-- END FOOTER SECTION -->
-
-
-
-
-
-
-
-
-    <script src="script.js"></script>
+ <script src="script.js"></script>
 </body>
 
 </html>
