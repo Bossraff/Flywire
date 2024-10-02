@@ -644,7 +644,7 @@ section {
   .modal-gallery img {
     margin: 5px;
     width: 50px; /* Fixed size for images in the gallery */
-    height: auto; /* Maintain aspect ratio */
+    height: 60px; /* Maintain aspect ratio */
     cursor: pointer;
     border-radius: 10%;
     transition: transform 0.3s ease, border 0.3s ease;
